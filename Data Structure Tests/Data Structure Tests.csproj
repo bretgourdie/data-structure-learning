@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>1bc7ac9a-e42c-450d-8a1c-5b179d46d0ff</ProjectGuid>
+    <ProjectGuid>{DB27182E-2677-460F-82AE-49DA17241B8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Data_Structure_Tests</RootNamespace>
-    <AssemblyName>Data_Structure_Tests</AssemblyName>
+    <AssemblyName>Data Structure Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,7 +50,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
