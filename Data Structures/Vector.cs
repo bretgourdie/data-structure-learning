@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data_Structures
 {
-    public class Vector<T>
+    public class Vector<T> : IEnumerable
     {
         private T[] _array;
         private int _size;
@@ -14,6 +14,46 @@ namespace Data_Structures
         public Vector(int capacity)
         {
             _array = new T[capacity];
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return new VectorEnumerator(this)
+        }
+
+        private class VectorEnumerator
+        {
+            private int position;
+            private Vector<T> vector;
+
+            public VectorEnumerator(Vector<T> vector)
+            {
+                this.vector = vector;
+                this.Reset();
+            }
+
+            public bool MoveNext()
+            {
+                if(position < vector._array.Length)
+                {
+                    position++;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            public void Reset()
+            {
+                position = -1;
+            }
+
+            public T Current()
+            {
+                return this.vector[position];
+            }
         }
 
         public T Get(int index)
