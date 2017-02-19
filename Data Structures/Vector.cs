@@ -23,20 +23,20 @@ namespace Data_Structures
 
         private class VectorEnumerator
         {
-            private int position;
-            private Vector<T> vector;
+            private int _position;
+            private Vector<T> _vector;
 
             public VectorEnumerator(Vector<T> vector)
             {
-                this.vector = vector;
+                this._vector = vector;
                 this.Reset();
             }
 
             public bool MoveNext()
             {
-                if(position < vector._array.Length)
+                if(_position < _vector._array.Length)
                 {
-                    position++;
+                    _position++;
                     return true;
                 }
                 else
@@ -47,12 +47,12 @@ namespace Data_Structures
 
             public void Reset()
             {
-                position = -1;
+                _position = -1;
             }
 
             public T Current()
             {
-                return this.vector[position];
+                return this._vector[_position];
             }
         }
 
