@@ -49,7 +49,7 @@ namespace Data_Structures
 
             public T Current()
             {
-                return this._vector[_position];
+                return this._vector[this._vector._position];
             }
         }
 
@@ -65,9 +65,9 @@ namespace Data_Structures
 
         public bool Add(T item)
         {
-            if(_size < _capacity)
+            if(_size < this._capacity)
             {
-                _array = resizeArray(_capacity * 2);
+                _array = resizeArray(this._capacity * 2);
             }
 
             _array[_size] = item;
@@ -82,9 +82,9 @@ namespace Data_Structures
                 throw new IndexOutOfRangeException();
             }
 
-            if(index >= _capacity)
+            if(index >= this._capacity)
             {
-                _array = resizeArray(_capacity * 2);
+                _array = resizeArray(this._capacity * 2);
             }
 
             _array[index] = item;
