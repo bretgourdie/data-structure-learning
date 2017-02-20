@@ -110,7 +110,7 @@ namespace Data_Structures
             return true;
         }
 
-        public T Delete(int index, T item)
+        public T Delete(int index)
         {
             T itemToReturn = default(T);
 
