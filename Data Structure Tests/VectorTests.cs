@@ -77,7 +77,29 @@ namespace Data_Structures.Tests
         [TestMethod()]
         public void InsertTest()
         {
-            Assert.Fail();
+            var size = 5;
+            var vec = new Vector<int>(size);
+
+            for (int ii = 0; ii < size - 1; ii++)
+            {
+                vec.Add(ii);
+            }
+
+            vec.Insert(0, 10);
+
+            for (int ii = 0; ii < vec.Length; ii++)
+            {
+                if (ii == 0)
+                {
+                    Assert.AreEqual(10, vec.Get(ii));
+                }
+
+                else
+                {
+                    var result = vec.Get(ii);
+                    Assert.AreEqual(ii - 1, result);
+                }
+            }
         }
 
         [TestMethod()]
