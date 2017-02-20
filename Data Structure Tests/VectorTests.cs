@@ -39,7 +39,22 @@ namespace Data_Structures.Tests
         [TestMethod()]
         public void AddTest()
         {
-            Assert.Fail();
+            var size = 5;
+            var vec = new Vector<int>(size);
+            var array = new int[size];
+
+            for (var ii = 0; ii < size; ii++)
+            {
+                vec.Add(ii);
+                array[ii] = ii;
+            }
+
+            Assert.AreEqual(size, vec.Length);
+
+            for (var ii = 0; ii < vec.Length; ii++)
+            {
+                Assert.AreEqual(array[ii], vec.Get(ii));
+            }
         }
 
         [TestMethod()]
