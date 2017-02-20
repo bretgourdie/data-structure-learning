@@ -31,6 +31,20 @@ namespace Data_Structures
                 this.Reset();
             }
 
+            public object Current
+            {
+                get
+                {
+                    return this._vector.Get(this._position);
+                }
+            }
+
+            public bool MoveNext()
+            {
+                this._position++;
+                return (_position < this._vector._size);
+            }
+
             public void Reset()
             {
                 _position = -1;
