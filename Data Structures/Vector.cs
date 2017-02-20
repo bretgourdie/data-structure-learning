@@ -50,7 +50,7 @@ namespace Data_Structures
             public bool MoveNext()
             {
                 this._position++;
-                return (_position < this._vector._size);
+                return (_position < this._vector.Length);
             }
 
             public void Reset()
@@ -62,7 +62,7 @@ namespace Data_Structures
 
         public T Get(int index)
         {
-            if (index < 0 || index >= _size)
+            if (index < 0 || index >= this.Length)
             {
                 throw new IndexOutOfRangeException();
             }
@@ -72,19 +72,19 @@ namespace Data_Structures
 
         public bool Add(T item)
         {
-            if(_size < this._capacity)
+            if(this.Length < this._capacity)
             {
                 _array = resizeArray(this._capacity * 2);
             }
 
-            _array[_size] = item;
+            _array[this.Length] = item;
 
             return true;
         }
 
         public bool Insert(int index, T item)
         {
-            if(index >= _size)
+            if(index >= this.Length)
             {
                 throw new IndexOutOfRangeException();
             }
@@ -103,22 +103,22 @@ namespace Data_Structures
         {
             T itemToReturn = default(T);
 
-            if(index >= _size)
+            if(index >= this.Length)
             {
                 throw new IndexOutOfRangeException();
             }
 
             itemToReturn = _array[index];
 
-            for(int ii = index; ii < _size; ii++)
+            for(int ii = index; ii < this.Length; ii++)
             {
-                if(ii+1 < _size)
+                if(ii+1 < this.Length)
                 {
                     _array[ii] = _array[ii+1];
                 }
             }
 
-            _array[_size] = default(T);
+            _array[this.Length] = default(T);
 
             return itemToReturn;
         }
