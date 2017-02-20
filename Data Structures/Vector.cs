@@ -15,7 +15,7 @@ namespace Data_Structures
 
         public IEnumerator GetEnumerator()
         {
-            return new VectorEnumerator(this)
+            return new VectorEnumerator(this);
         }
 
         private class VectorEnumerator
@@ -122,7 +122,7 @@ namespace Data_Structures
 
             for(int ii = 0; ii < _array.Length; ii++)
             {
-                newArray[ii] = _array[ii]
+                newArray[ii] = _array[ii];
             }
 
             return newArray;
