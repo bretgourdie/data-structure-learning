@@ -27,7 +27,18 @@ namespace Data_Structures.Tests
         [TestMethod()]
         public void GetEnumeratorTest()
         {
-            Assert.Fail();
+            var size = 5;
+            var vec = new Vector<int>(size);
+            for (int ii = 0; ii < size; ii++)
+            {
+                vec.Add(ii + 1);
+            }
+
+            // Check for non-zero values
+            foreach (var item in vec)
+            {
+                Assert.AreNotEqual(0, item);
+            }
         }
 
         [TestMethod()]
