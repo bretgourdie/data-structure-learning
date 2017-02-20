@@ -51,7 +51,7 @@ namespace Data_Structures
 
             public T Current()
             {
-                return this._vector[this._vector._position];
+                return this._vector[this._position];
             }
         }
 
