@@ -83,7 +83,31 @@ namespace Data_Structures.Tests
         [TestMethod()]
         public void DeleteTest()
         {
-            Assert.Fail();
+            var size = 5;
+            var vec = new Vector<int>(size);
+            var array = new int[size];
+
+            for (var ii = 0; ii < size; ii++)
+            {
+                vec.Add(ii);
+                array[ii] = ii;
+            }
+
+            var index = 2;
+
+            vec.Delete(index);
+
+            Assert.AreEqual(size - 1, vec.Length);
+
+            for (int ii = index; ii < array.Length - 1; ii++)
+            {
+                array[ii] = array[ii + 1];
+            }
+
+            for (int ii = 0; ii < vec.Length; ii++)
+            {
+                Assert.AreEqual(array[ii], vec.Get(ii));
+            }
         }
 
         [TestMethod]
