@@ -96,7 +96,7 @@ namespace Data_Structures
 
         public T Delete(int index, T item)
         {
-            T itemToReturn = null;
+            T itemToReturn = default(T);
 
             if(index >= _size)
             {
@@ -113,7 +113,7 @@ namespace Data_Structures
                 }
             }
 
-            _array[_size] = null;
+            _array[_size] = default(T);
 
             return itemToReturn;
         }
