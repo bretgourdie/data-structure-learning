@@ -18,6 +18,13 @@ namespace Data_Structures.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void VectorBadCapacityTest()
+        {
+            var vec = new Vector<int>(-1);
+        }
+
+        [TestMethod()]
         public void GetEnumeratorTest()
         {
             Assert.Fail();
