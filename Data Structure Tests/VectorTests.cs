@@ -33,7 +33,13 @@ namespace Data_Structures.Tests
         [TestMethod()]
         public void GetTest()
         {
-            Assert.Fail();
+            var vec = new Vector<int>(1);
+
+            vec.Add(5);
+
+            var result = vec.Get(0);
+
+            Assert.AreEqual(5, result);
         }
 
         [TestMethod()]
