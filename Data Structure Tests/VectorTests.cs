@@ -21,5 +21,15 @@ namespace Data_Structure_Tests
             // Assert
             Assert.AreEqual(0, vec.Length);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void BadGet()
+        {
+            // Arrange
+            var vec = new Vector<int>(1);
+
+            vec.Get(1);
+        }
     }
 }
