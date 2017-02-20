@@ -9,6 +9,14 @@ namespace Data_Structures
         private int _size;
         private int _capacity;
 
+        public int Length
+        {
+            get
+            {
+                return _size;
+            }
+        }
+
         public Vector(int capacity)
         {
             this._capacity = capacity;
