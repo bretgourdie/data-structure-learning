@@ -6,11 +6,46 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Data_Structures;
 
-namespace Data_Structure_Tests
+namespace Data_Structures.Tests
 {
-    [TestClass]
-    class VectorTests
+    [TestClass()]
+    public class VectorTests
     {
+        [TestMethod()]
+        public void VectorTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetEnumeratorTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void AddTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void InsertTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void DeleteTest()
+        {
+            Assert.Fail();
+        }
 
         [TestMethod]
         public void EmptyVector()
