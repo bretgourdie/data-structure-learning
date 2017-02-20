@@ -14,7 +14,7 @@ namespace Data_Structures.Tests
         [TestMethod()]
         public void VectorTest()
         {
-            Assert.Fail();
+            var vec = new Vector<int>(0);
         }
 
         [TestMethod()]
