@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Data_Structures;
 
 namespace Data_Structure_Tests
 {
@@ -15,10 +16,10 @@ namespace Data_Structure_Tests
         public void EmptyVector()
         {
             // Arrange
-
-            // Act
+            var vec = new Vector<int>(1);
 
             // Assert
+            Assert.AreEqual(0, vec.Length);
         }
     }
 }
