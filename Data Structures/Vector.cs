@@ -100,7 +100,7 @@ namespace Data_Structures
 
             for (int ii = this.Length; ii > index; ii--)
             {
-                this._array[ii - 1] = this._array[ii];
+                this._array[ii] = this._array[ii - 1];
             }
 
             this._array[index] = item;
