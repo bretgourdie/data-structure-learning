@@ -7,9 +7,11 @@ namespace Data_Structures
     {
         private T[] _array;
         private int _size;
+        private int _capacity;
 
         public Vector(int capacity)
         {
+            this._capacity = capacity;
             _array = new T[capacity];
         }
 
@@ -124,6 +126,8 @@ namespace Data_Structures
             {
                 newArray[ii] = _array[ii];
             }
+
+            this._capacity = newSize;
 
             return newArray;
         }
