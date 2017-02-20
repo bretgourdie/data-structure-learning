@@ -98,12 +98,12 @@ namespace Data_Structures
                 throw new IndexOutOfRangeException();
             }
 
-            if(index >= this._capacity)
+            for (int ii = this.Length; ii > index; ii--)
             {
-                _array = resizeArray(this._capacity * 2);
+                this._array[ii - 1] = this._array[ii];
             }
 
-            _array[index] = item;
+            this._array[index] = item;
 
             this._size++;
 
