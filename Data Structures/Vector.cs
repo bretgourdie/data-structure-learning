@@ -79,6 +79,8 @@ namespace Data_Structures
 
             _array[this.Length] = item;
 
+            this._size++;
+
             return true;
         }
 
@@ -95,6 +97,8 @@ namespace Data_Structures
             }
 
             _array[index] = item;
+
+            this._size++;
 
             return true;
         }
@@ -119,6 +123,8 @@ namespace Data_Structures
             }
 
             _array[this.Length] = default(T);
+
+            this._size--;
 
             return itemToReturn;
         }
