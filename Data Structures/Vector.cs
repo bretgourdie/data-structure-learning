@@ -19,6 +19,13 @@ namespace Data_Structures
 
         public Vector(int capacity)
         {
+            if (capacity < 0)
+            {
+                throw new ArgumentException(
+                    "Can't have a negative capacity.",
+                    "capacity");
+            }
+
             this._capacity = capacity;
             _array = new T[capacity];
         }
